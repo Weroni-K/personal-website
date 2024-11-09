@@ -7,21 +7,27 @@
         collaborative, and a fast learner. Let's create something amazing together!
       </h2>
       <div class="about-btn">
-        <a href="./media/CV.pdf" without rel="noopener noreferrer" target="_blank">
+        <a :href="CV" without rel="noopener noreferrer" target="_blank">
           <button type="button" trailingIcon="" label="CV">See my CV</button>
         </a>
       </div>
     </div>
     <div class="right">
-      <div><img class="my-avatar" src="./media/profile1.png" alt="avatar" /></div>
+      <div><img class="my-avatar" :src="Avatar" alt="avatar" /></div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Avatar from '../assets/media/profile1.png'
+import CV from '../assets/media/CV.pdf'
+</script>
 
 <style scoped>
 h1 {
+  color: var(--color-primary);
+}
+h2 {
   color: var(--color-text);
 }
 p {
