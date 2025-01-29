@@ -37,9 +37,10 @@ p {
 #about {
   display: flex;
   flex-direction: row;
-  margin-top: 18rem;
+  margin: 18rem auto auto;
   flex-wrap: none;
   flex: 1 auto;
+  max-width: 80%;
   gap: 96px;
   justify-content: center;
   align-items: flex-start;
@@ -109,7 +110,7 @@ p {
   color: var(--color-text);
   font-size: 24px;
   line-height: 32px;
-  padding: 8px 16px;
+  padding: 8px;
   border-radius: 4px;
   min-width: 192px;
   min-height: 56px;
