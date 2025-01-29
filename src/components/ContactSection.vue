@@ -69,9 +69,13 @@ a:hover {
   color: var(--color-accent);
 }
 
+p:hover {
+  color: var(--color-accent);
+}
+
 li:hover {
   .icon {
-    stroke: var(--color-text);
+    stroke: var(--color-accent);
   }
 }
 </style>
