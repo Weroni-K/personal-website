@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+:root {
+  --color-bg: #58a7a4;
+  --color-text: #e5fffc;
+  --color-border: #dddddd;
+  --color-primary: #335194;
+  --color-secondary: #4994b4;
+  --color-accent: #fa578dcb;
+  --color-neutral-white: #fff;
+  --color-neutral-grey: #333;
+}
+
+.dark-theme {
+  --color-bg: #407775e7;
+  --color-text: #f1f1f1e3;
+  --color-border: #6b6b6b;
+  --color-primary: #4565ac;
+  --color-secondary: #1d3d4b;
+  --color-accent: #59bb71;
+  --color-neutral-white: #fff;
+  --color-neutral-grey: #333;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  background-image: radial-gradient(
+    140% 107% at 50% 10%,
+    #58a7a4 37.41%,
+    #4994b4 69.27%,
+    #58a7a4 90%,
+    #58a7a4 100%
+  );
+  /* background-image: url('background2.svg'); */
+  /* background-color: var(--color-bg); */
+  /* background: var(--color-bg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-text);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  word-spacing: -1px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+}
+
+button {
+  font-family: 'Courier New', Courier, monospace;
+  word-spacing: -1px;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  .primary {
+    color: var(--color-primary);
+  }
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+}
+
+.icon {
+  stroke: var(--color-primary);
+}
+
+/* .page {
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 0;
+} */
