@@ -40,17 +40,14 @@ p {
   margin: 18rem auto auto;
   flex-wrap: none;
   flex: 1 auto;
-  max-width: 80%;
-  gap: 96px;
+  gap: 2rem;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 160px;
-  padding-right: 208px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 2rem 4rem;
   color: var(--color-neutral-grey);
   background-color: var(--color-secondary);
   position: relative;
+  width: 90%;
 }
 
 #about::before,
@@ -74,32 +71,38 @@ p {
   border-width: 0 0 2px 2px;
 }
 
-#about .my-avatar {
-  width: 400px;
-  height: 400px;
-  border-radius: 360px;
-  border: 2px solid var(--color-text);
+.right {
+  align-self: center;
 }
 
-#about .my-avatar:hover {
+.my-avatar {
+  min-width: 200px;
+  width: auto;
+  max-width: 25rem;
+  aspect-ratio: 1;
+  border-radius: 360px;
+  border: 2px solid var(--color-text);
+  object-fit: cover;
+  display: inline-block;
+}
+
+.my-avatar:hover {
   border: 2px solid var(--color-accent);
 }
 
-.dark-theme #about .my-avatar {
+.dark-theme .my-avatar {
   filter: brightness(85%);
 }
 
-#about .about-btn {
+.about-btn {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  margin-left: 344px;
-  margin-top: 64px;
-  margin-bottom: 0;
+  margin: 4rem auto 0;
   z-index: 10;
 }
 
-#about .about-btn button {
+.about-btn button {
   z-index: 10;
   opacity: 0.84;
   font-weight: 500;
@@ -116,12 +119,73 @@ p {
   min-height: 56px;
 }
 
-#about .about-btn button:hover {
+.about-btn button:hover {
   transform: scale(1.01) rotate(-359.2deg);
   opacity: 1;
   cursor: pointer;
   border-color: var(--color-accent);
   color: var(--color-accent);
   background-color: var(--color-text);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--color-text);
+}
+
+.right {
+  max-width: 40%;
+}
+
+@media (max-width: 1248px) {
+  #about {
+    width: 100%;
+    margin: 14rem 0 auto;
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+  .my-avatar {
+    min-width: 200px;
+    width: auto;
+    max-width: 20rem;
+  }
+  .about-btn button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    margin: 6rem 0 0;
+    padding: 4rem 1rem 3rem;
+  }
+  .left {
+    margin-inline: calc(24px - 1rem);
+    align-items: center;
+    max-width: 100%;
+  }
+  .right {
+    max-width: 100%;
+    margin-inline: calc(24px - 1rem);
+  }
+  .about-btn {
+    margin-top: 2rem;
+    button {
+      font-size: 20px;
+    }
+  }
+  .my-avatar {
+    min-width: 200px;
+    width: auto;
+    max-width: 15rem;
+  }
 }
 </style>

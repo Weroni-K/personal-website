@@ -34,10 +34,8 @@ import GitHubIcon from './contact-components/GitHubIcon.vue'
 
 <style scoped>
 #contact {
-  margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 144px;
-  padding-left: 160px;
+  margin: 1rem 0 9rem;
+  width: 90%;
 }
 
 .contact-list {
@@ -55,8 +53,18 @@ import GitHubIcon from './contact-components/GitHubIcon.vue'
   gap: 12px;
 }
 
+li:hover {
+  .icon {
+    stroke: var(--color-accent);
+  }
+}
+
 p {
   font-size: 24px;
+}
+
+p:hover {
+  color: var(--color-accent);
 }
 
 a {
@@ -69,13 +77,22 @@ a:hover {
   color: var(--color-accent);
 }
 
-p:hover {
-  color: var(--color-accent);
+@media (max-width: 1248px) {
+  #contact {
+    margin: 0 24px 4rem;
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+  }
 }
 
-li:hover {
-  .icon {
-    stroke: var(--color-accent);
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
   }
 }
 </style>
