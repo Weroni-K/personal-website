@@ -178,14 +178,14 @@ input:checked + .slider:before {
   width: 100%;
   z-index: 100;
   max-width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-navbar);
   transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .navbar.sticky {
-  background-color: var(--color-primary);
+  background-color: var(--color-navbar);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 1024px;
   border-radius: 50px;
